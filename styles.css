@@ -1,13 +1,15 @@
-/* 1. Carga de la Fuente */
+/* 1. Carga de la Fuente - REVISAR ESTA SECCIÓN */
 @font-face {
     font-family: 'Oldrobloxfont';
+    /* Asegúrate de que el nombre del archivo sea exactamente 'Oldrobloxfont.ttf' */
     src: url('Oldrobloxfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'Oldrobloxfont', monospace; /* Usa la fuente y fallback a monospace */
+    /* Aplica la fuente a todo el cuerpo del documento */
+    font-family: 'Oldrobloxfont', monospace; 
     background-color: white;
     padding: 20px;
     display: flex;
@@ -31,11 +33,12 @@ body {
     font-size: 5rem;
     line-height: 1;
     margin: 0;
-    /* Ajuste para que se parezca al boceto */
+    /* Usa un text-shadow sutil para darle más cuerpo */
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .sketches {
+    /* ... (resto del CSS para los bocetos si los quieres mantener) */
     position: absolute;
     top: -40px;
     left: 50%;
@@ -52,6 +55,7 @@ body {
 }
 
 .menu-btn {
+    /* La fuente se hereda del body, pero la definimos explícitamente aquí por seguridad */
     font-family: 'Oldrobloxfont', monospace;
     font-size: 2rem;
     padding: 15px 30px;
@@ -66,17 +70,13 @@ body {
     transition: transform 0.1s;
 }
 
-.menu-btn:active {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.8);
-}
+/* ... (resto del CSS de los botones, miniaturas, etc.) ... */
 
 .download-btn {
-    font-size: 1.5rem; /* Ajuste para que quepa en dos líneas */
+    font-size: 1.5rem; 
     padding: 10px 20px;
 }
 
-/* 4. Contenido Inferior (Miniaturas) */
 .content-box {
     border: 2px solid black;
     box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.8);
@@ -86,7 +86,7 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    min-height: 300px; /* Para simular el área grande */
+    min-height: 300px; 
 }
 
 .thumbnail {
@@ -106,8 +106,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem; /* Para simular los dibujos */
+    font-size: 3rem; 
     overflow: hidden;
+}
+
+.thumbnail p {
+    margin: 5px 0 0 0;
+    font-size: 1.2rem;
 }
 
 .thumbnail p {
