@@ -1,0 +1,116 @@
+/* 1. Carga de la Fuente */
+@font-face {
+    font-family: 'Oldrobloxfont';
+    src: url('Oldrobloxfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Oldrobloxfont', monospace; /* Usa la fuente y fallback a monospace */
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin: 0;
+}
+
+/* 2. Estilo General del Contenido */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.logo {
+    color: red;
+    font-size: 5rem;
+    line-height: 1;
+    margin: 0;
+    /* Ajuste para que se parezca al boceto */
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.sketches {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 100px;
+}
+
+/* 3. Estilo de los Botones del Menú */
+.menu-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.menu-btn {
+    font-family: 'Oldrobloxfont', monospace;
+    font-size: 2rem;
+    padding: 15px 30px;
+    background-color: white;
+    /* Efecto "dibujado a mano" */
+    border: 2px solid black;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.8), 
+                -1px -1px 0px 0px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    line-height: 1.2;
+    text-align: center;
+    transition: transform 0.1s;
+}
+
+.menu-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.download-btn {
+    font-size: 1.5rem; /* Ajuste para que quepa en dos líneas */
+    padding: 10px 20px;
+}
+
+/* 4. Contenido Inferior (Miniaturas) */
+.content-box {
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    min-height: 300px; /* Para simular el área grande */
+}
+
+.thumbnail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+}
+
+.thumb-sketch {
+    border: 2px solid black;
+    width: 100%;
+    max-width: 120px;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /* Para simular los dibujos */
+    overflow: hidden;
+}
+
+.thumbnail p {
+    margin: 5px 0 0 0;
+    font-size: 1.2rem;
+}
